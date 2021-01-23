@@ -1,0 +1,16 @@
+---
+mcollective_agent_puppetca::config_name: puppetca
+mcollective_agent_puppetca::common_files:
+- data/puppetca_data.rb
+- data/puppetca_data.ddl
+- util/puppetca/puppetca.rb
+- agent/puppetca.ddl
+- agent/puppetca.json
+mcollective_agent_puppetca::common_directories:
+- util/puppetca
+mcollective_agent_puppetca::server_files:
+- agent/puppetca.rb
+mcollective_agent_puppetca::server_directories: []
+mcollective_agent_puppetca::client_files: []
+mcollective_agent_puppetca::client_directories: []
+

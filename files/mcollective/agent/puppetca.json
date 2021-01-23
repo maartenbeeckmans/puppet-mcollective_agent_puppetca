@@ -1,0 +1,125 @@
+{
+  "$schema": "https://choria.io/schemas/mcorpc/ddl/v1/agent.json",
+  "metadata": {
+    "name": "puppetca",
+    "description": "Agent to manage Puppet certificates",
+    "author": "R.I.Pienaar",
+    "license": "Apache-2.0",
+    "version": "4.0.2",
+    "url": "https://github.com/choria-plugins/puppetca-agent",
+    "timeout": 20
+  },
+  "actions": [
+    {
+      "action": "clean",
+      "input": {
+        "certname": {
+          "prompt": "Certificate Name",
+          "description": "Certificate Name to clean",
+          "type": "string",
+          "default": null,
+          "optional": false,
+          "validation": "shellsafe",
+          "maxlength": 100
+        }
+      },
+      "output": {
+        "out": {
+          "description": "Human readable status message",
+          "display_as": "Result",
+          "default": null
+        }
+      },
+      "display": "always",
+      "description": "Performs a puppetca --clean on a certficate"
+    },
+    {
+      "action": "list",
+      "input": {
+      },
+      "output": {
+        "requests": {
+          "description": "Waiting CSR Requests",
+          "display_as": "Waiting CSRs",
+          "default": null
+        },
+        "signed": {
+          "description": "Signed Certificates",
+          "display_as": "Signed",
+          "default": null
+        }
+      },
+      "display": "always",
+      "description": "Lists all requested and signed certificates"
+    },
+    {
+      "action": "revoke",
+      "input": {
+        "certname": {
+          "prompt": "Certificate Name",
+          "description": "Certificate Name to revoke",
+          "type": "string",
+          "default": null,
+          "optional": false,
+          "validation": "shellsafe",
+          "maxlength": 100
+        }
+      },
+      "output": {
+        "out": {
+          "description": "Output from puppetca",
+          "display_as": "Result",
+          "default": null
+        }
+      },
+      "display": "always",
+      "description": "Revokes a certificate by doing the same as clean"
+    },
+    {
+      "action": "sign",
+      "input": {
+        "certname": {
+          "prompt": "Certificate Name",
+          "description": "Certificate Name to sign",
+          "type": "string",
+          "default": null,
+          "optional": false,
+          "validation": "shellsafe",
+          "maxlength": 100
+        }
+      },
+      "output": {
+        "out": {
+          "description": "Output from puppetca",
+          "display_as": "Result",
+          "default": null
+        }
+      },
+      "display": "failed",
+      "description": "Signs a certificate request"
+    },
+    {
+      "action": "status",
+      "input": {
+        "certname": {
+          "prompt": "Certificate Name",
+          "description": "Certificate Name to lookup",
+          "type": "string",
+          "default": null,
+          "optional": false,
+          "validation": "shellsafe",
+          "maxlength": 100
+        }
+      },
+      "output": {
+        "msg": {
+          "description": "Human readable status message",
+          "display_as": "Result",
+          "default": null
+        }
+      },
+      "display": "always",
+      "description": "Find a certificate's status"
+    }
+  ]
+}

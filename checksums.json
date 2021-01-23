@@ -1,0 +1,17 @@
+{
+  "CHANGELOG.md": "d79c369b77e79c4251362c6ba65979ab",
+  "LICENSE": "3b83ef96387f14655fc854ddc3c6bd57",
+  "NOTICE": "99b1ea54a4c031a0c9a492fe624a2d0d",
+  "README.md": "868be63de23cf96a6490ef9c340641e2",
+  "data/defaults.yaml": "669baaff68202ff99ca7a6f930e2ff2f",
+  "data/plugin.yaml": "6e364861cbcfb7a9f9c9c1b7d6de4c44",
+  "files/mcollective/agent/puppetca.ddl": "0ee7df0360bc247082c1805b1650a921",
+  "files/mcollective/agent/puppetca.json": "8ca4a7b7f4ddc3239ee246f6e769369c",
+  "files/mcollective/agent/puppetca.rb": "e5c04d14ff2d9af4c265af86a740d3e3",
+  "files/mcollective/data/puppetca_data.ddl": "0de80c25b2dba4abfe2008b1c6720665",
+  "files/mcollective/data/puppetca_data.rb": "1faeddaf0d459d2e2095b2599ba9e315",
+  "files/mcollective/util/puppetca/puppetca.rb": "7bf4e363db4ea29841b7622bef6b7dd8",
+  "hiera.yaml": "686844de205da23a5552c4a50a517929",
+  "manifests/init.pp": "2fe6367b88bd81501dccced73b602a38",
+  "metadata.json": "921de4b017974f7d879a93cce3de8e08"
+}
